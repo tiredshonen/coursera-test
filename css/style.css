@@ -164,16 +164,35 @@ img {vertical-align: middle;}
 }
 
 /*Music*/
+
 #music-wrapper{
   max-width: 80%
   margin: auto;
 }
+
+#current-rotation-wrapper{
+  margin:auto;
+  max-width: 100%;
+}
+
+#current-rotation-bio-container{
+  max-width: 50%;
+  float: right;
+  padding-left: 20px;
+  margin:auto;
+  padding-top: -20px;
+}
+
+
 #playlist-container{
-  max-width: 80%;
-  margin: auto;
+  max-width: 50%;
+  padding-top: 45px;
 }
 
 #playlist-container-2{
+  display: block;
+  padding-top: 30px;
   max-width: 100%
   margin: auto;
+  clear: both;
 }
