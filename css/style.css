@@ -36,7 +36,7 @@ a:link, a:visited{
   display: block;
   color: black;
   text-align: center;
-  padding-top: 15px;
+  padding-top: 14px;
   padding-left: 14px;
   text-decoration: none;
 }
@@ -161,4 +161,19 @@ img {vertical-align: middle;}
   text-decoration: none;
   display: inline-block;
   font-size: 18px;
+}
+
+/*Music*/
+#music-wrapper{
+  max-width: 80%
+  margin: auto;
+}
+#playlist-container{
+  max-width: 80%;
+  margin: auto;
+}
+
+#playlist-container-2{
+  max-width: 100%
+  margin: auto;
 }
