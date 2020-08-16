@@ -166,6 +166,12 @@ img {vertical-align: middle;}
 }
 
 /*Music*/
+#music-subtitle{
+  font-family: 'Gravitas One', cursive;
+  font-size: 30px;
+  text-decoration: none;
+  text-align: center;
+}
 #music-wrapper{
   max-width: 80%
   margin: auto;
@@ -375,11 +381,18 @@ img {vertical-align: middle;}
   #current-rotation-bio-container{
   max-width: 100%;
   clear: both;
-  padding-left: 20px;
+  padding-left: 0px;
   margin: 0px;
   padding-top: 0px;
   text-align: left;
   display: block;
+  }
+
+  #music-subtitle{
+  font-family: 'Gravitas One', cursive;
+  font-size: 35px;
+  text-decoration: none;
+  text-align: center;
   }
 }
 
