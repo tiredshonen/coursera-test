@@ -71,6 +71,7 @@ a:link, a:visited{
   position: relative;
 }
 
+
 .mySlides {display: none;}
 img {vertical-align: middle;}
 
@@ -126,7 +127,7 @@ img {vertical-align: middle;}
   font-family: 'Gravitas One', cursive;
   font-size: 30px;
   text-decoration: none;
-  text-align: left;
+  text-align: center;
 }
 
 #about-me-wrapper{
@@ -279,4 +280,40 @@ img {vertical-align: middle;}
   position: relative;
 }
 } 
+
+/*Blog Entries*/
+.article-container{
+  max-width: 80%;
+  margin: auto;
+}
+
+.article-main-photo{
+  max-width: 100%; 
+  margin: auto;
+}
+
+.article-main-photo img{
+  max-width:100%;
+}
+
+.song-conatiner{
+  max-width: 100%;
+  margin: auto;
+  display: inline-block;
+  height: 900px;
+}
+
+/* Blog Home Page */ 
+.blog-entries-container{
+  margin: auto;
+  max-width: 50%;
+  max-height: 100%; 
+}
+
+.blog-entries-container a:hover{
+    color: #eaa852;
+}
+
+
+
 
