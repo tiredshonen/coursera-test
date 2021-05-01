@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Thomas Ngo</title>
-
+  <title>thomas p. ngo</title>
+  <link rel="shortcut icon" type="image/png" href="assets/favicon.png">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -13,10 +13,9 @@
 
 <body>
   <div class="topnav">
-    <h1><a href="index.html" id="heading">thomas ngo</a></h1>
+    <h1><a href="index.html" id="heading">thomas p. ngo</a></h1>
     <a class="topnav-link" href="about.html">about me</a>
     <a class="topnav-link" href="writing.html">blog</a>
-    <a class="topnav-link" href="music.html">music</a>
     <a class="topnav-link" href="portfolio.html">portfolio</a>
   </div>
 
@@ -43,33 +42,19 @@
     </div>       
   </div>
 
+  <div class="music-activity"> 
+    <p>
+      <img src="assets/music_notes.gif" style="width: 2rem; height: 2rem;">
+      <span id="spotify-activity"></span>
+    </p>
+  </div>
+
   <div class="footer">
     <p>copyright &copy; thomas ngo</p>
   </div>
 
-<script>
-  var slideIndex = 0;
-  showSlides();
-
-  function showSlides() {
-    var i;
-    var slides = document.getElementsByClassName("mySlides");
-    var dots = document.getElementsByClassName("dot");
-    for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";  
-    }
-
-    slideIndex++;
-    if (slideIndex > slides.length) {slideIndex = 1}    
-    for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
-    }
-
-    slides[slideIndex-1].style.display = "block";  
-    dots[slideIndex-1].className += " active";
-    setTimeout(showSlides, 2000); // Change image every 2 seconds
-  }
-</script>
+  <script src="js/slides.js"></script>
+  <script src="js/music.js"></script>
 
 </body>
 
