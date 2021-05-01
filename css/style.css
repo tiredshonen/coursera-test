@@ -7,6 +7,10 @@ body {
   font-family: 'Open Sans', sans-serif;
 }
 
+script{
+  display: none;
+}
+
 /*Basics*/
 .topnav {
   overflow: hidden;
@@ -44,7 +48,7 @@ a:link, a:visited{
 }
 
 .topnav h1 a:hover{
-  color: #eaa852;
+  color: #10752b;
 }
 /* Change color on hover */
 .topnav a:hover {
@@ -67,7 +71,7 @@ a:link, a:visited{
   clear: both;
   text-align: center;
   margin: auto;
-  padding: 15px;
+  padding: 10px;
   position: relative;
 }
 
@@ -131,7 +135,7 @@ img {vertical-align: middle;}
 }
 
 #about-me-wrapper{
-  max-width: 80%
+  max-width: 100%; 
   margin: auto;
 }
 
@@ -231,7 +235,7 @@ img {vertical-align: middle;}
 
 /* Change color on hover */
 .sidenav a:hover {
-  color: gray;
+  color:gray;
 }
 
 /* Style the content */
@@ -396,7 +400,25 @@ img {vertical-align: middle;}
   }
 }
 
+/* Style the Image Used to Trigger the Modal */
+#myImg{
+  cursor: pointer;
+  transition: 0.3s;
+}
 
+#myImg:hover{opacity: 0.7;}
 
+.music-activity{  
+  background-color: white;
+  font-size: 14px;
+  clear: both;
+  text-align: center;
+  margin: auto;
+  padding: 5px;
+  position: relative;
+}
 
-
+.spotify-activity{
+  display: inline-block;
+  text-align: center;
+}
