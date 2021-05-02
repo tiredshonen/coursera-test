@@ -1,24 +1,19 @@
 var songName; 
 var songArtist; 
-var accessToken; 
+var accessToken = 'BQDL0bQczyq4jf9zJDzfnw0K07pUJEtSTXNwxadt1byTCM-IBZydBxNxylWcfqU4OLpz0pD4mA3kXgu1nQuX5oDc4h_JpE2tMfUMwr-pKIBKD9xxLAXMigd8XrKNUmPfiwWpJhQutMzvnfTX2GxKjwhUSMHc'; 
 
 const getActivity = async () => {
-    const data = { grant_type:'authorization_code',  code:'AQD5t5FVfcvg41CdlcIGEKrteYN4YsQHNWGhAtaQlLLVRPwFGR04s5_b8vhWqpoxXMYIJjMZeHtyjt0dnLnFBqx3coNG8YCk1zu4clr9cuARIp0W4s77Ch4b_rLQ5fDZ_yTnQLkAmKZDjK72iBHNG3OZfOGKGCINTJNdw0ihWPf_eMNYG0HoB9_juHtsvgRDTs13i_qA', redirect_uri:'https%3A%2F%2Fthomaspngo.com%2F'};
+    //Get authorization code
 
-    const tokenRequest = await fetch('https://accounts.spotify.com/api/token', {
-        method: 'POST',
-        headers: {
-            'Authorization' : "Basic " + 'OWNlZTAyYTgwZTJmNDM0YzgwY2I2ZDA2MTA2MjUxNjA6NDliMmZlYWQ0M2M1NDZhZmIzNTkwZjgwZjE5NjUyYTg='
-        },
-        body: JSON.stringify(data),
-    }); 
-    console.log(tokenRequest);
-    const tokenObject = await tokenRequest.json(); 
-    token = tokenObject.access_token; 
-    
+   // var authRequest = await fetch('https://accounts.spotify.com/authorize?client_id=9cee02a80e2f434c80cb6d0610625160&scope=user-read-recently-played&response_type=code&redirect_uri=https%3A%2F%2Fthomaspngo.com%2F'); 
+
+
+    //Use authorization code to get access token 
+
+    //Use access token to get recently-played track
     const result = await fetch('https://api.spotify.com/v1/me/player/recently-played', {
         method: 'GET', 
-        headers: { 'Authorization' : 'Bearer ' + token}
+        headers: { 'Authorization' : 'Bearer ' + accessToken}
     });
 
     const info = await result.json(); 
@@ -31,6 +26,8 @@ const getActivity = async () => {
         document.getElementById('spotify-activity').innerHTML = messasge; 
         return info; 
 }
+
+
 const object = getActivity(); 
 
 /*
@@ -39,6 +36,5 @@ clientSecret = '49b2fead43c546afb3590f80f19652a8';
 
 https://accounts.spotify.com/authorize?client_id=9cee02a80e2f434c80cb6d0610625160&scope=user-read-recently-played&response_type=code&redirect_uri=https%3A%2F%2Fthomaspngo.com%2F
 
-curl -H "Authorization: Basic OWNlZTAyYTgwZTJmNDM0YzgwY2I2ZDA2MTA2MjUxNjA6NDliMmZlYWQ0M2M1NDZhZmIzNTkwZjgwZjE5NjUyYTg=" -d grant_type=authorization_code -d code=AQD5t5FVfcvg41CdlcIGEKrteYN4YsQHNWGhAtaQlLLVRPwFGR04s5_b8vhWqpoxXMYIJjMZeHtyjt0dnLnFBqx3coNG8YCk1zu4clr9cuARIp0W4s77Ch4b_rLQ5fDZ_yTnQLkAmKZDjK72iBHNG3OZfOGKGCINTJNdw0ihWPf_eMNYG0HoB9_juHtsvgRDTs13i_qA -d redirect_uri=https%3A%2F%2Fthomaspngo.com%2F https://accounts.spotify.com/api/token
+curl -H "Authorization: Basic OWNlZTAyYTgwZTJmNDM0YzgwY2I2ZDA2MTA2MjUxNjA6NDliMmZlYWQ0M2M1NDZhZmIzNTkwZjgwZjE5NjUyYTg=" -d grant_type=authorization_code -d code=AQBqtEREPq5J5hLijgOSraDVa1ikcAIAmyixMf2fHWn_wcg3RCRw579TU2FK-yvDAfZYaViYPKI3ccawFy2fpYbUVroa84X7mE-hhFAYnQpRMa3IqmOy7AzDtywLIcEuHpbkTPEEkt9j0XNMgvKff5cJl0pBbxNG_Cq9HRxwXIuj8BCNkdhTW_1DlyO1ZqCAoVlD0hmf -d redirect_uri=https%3A%2F%2Fthomaspngo.com%2F https://accounts.spotify.com/api/token
 */
-
